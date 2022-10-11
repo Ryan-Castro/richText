@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="input">
+        <div class="divTxt">
+            <iframe src="about:blank" contenteditable='true' frameborder="0" name='txtIframe' id='txtIframe' class="texto">
+                <html>
+                    <head>
+                        <link rel="stylesheet" href="style.css">
+                    </head>
+                </html>
+            </iframe>
+        </div>
+        <div id="editBar">
+            <button onclick="bold()">Negrito</button>
+            <button onclick="italic()">italico</button>
+            <select id="titulos" onclick="heading()">
+                <option value="h1">Título-1</option>
+                <option value="h2">Título-2</option>
+                <option value="h3">Título-3</option>
+                <option value="h4">Título-4</option>
+                <option value="div">Texto</option>
+            </select>
+            <select id="fontes" onclick="fontName()">
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Trebuchet MS">trebuchet</option>
+                <option value="DancingScript">Dancing Script</option>
+
+            </select>
+            <select id="size" onclick="fontSize()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+
+            </select>
+            <input type="color" oninput="color()" id="color">
+            <button onclick="riscar()">Riscar</button>
+            <button onclick="marcar()">marcar</button>
+            <span id="palavras">1</span>
+        </div>
+        <input type="button" value="Testar" onclick="testar()">
+    </div>
+    
+    
+    <div class="output">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
