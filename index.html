@@ -4,31 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/iframe.css">
+    <link rel="stylesheet" href="./src/styles/edirBar.css">
     <title>Rich Text</title>
 </head>
 <body>
-    <div class="input">
-        <div class="divTxt">
-            <iframe src="about:blank" contenteditable='true' frameborder="0" name='txtIframe' id='txtIframe' class="texto">
-                <html>
-                    <head>
-                        <link rel="stylesheet" href="style.css">
-                    </head>
-                </html>
-            </iframe>
-        </div>
+    <div id="divTxt">
+        <iframe src="about:blank" contenteditable='true' frameborder="0" name='txtIframe' id='txtIframe' class="texto"></iframe>
         <div id="editBar">
-            <button onclick="bold()">Negrito</button>
-            <button onclick="italic()">italico</button>
+            <button onclick="command('bold', 'null')">Negrito</button>
+            <button onclick="command('italic', 'null')">italico</button>
             <select id="titulos" onclick="heading()">
                 <option value="h1">Título-1</option>
                 <option value="h2">Título-2</option>
                 <option value="h3">Título-3</option>
                 <option value="h4">Título-4</option>
-                <option value="div">Texto</option>
+                <option value="div" selected>Texto</option>
             </select>
-            <select id="fontes" onclick="fontName()">
+            <select id="fontes" onclick="commandValue('fontName', 'fontes')">
                 <option value="Arial">Arial</option>
                 <option value="Times New Roman">Times New Roman</option>
                 <option value="Helvetica">Helvetica</option>
@@ -36,10 +30,10 @@
                 <option value="DancingScript">Dancing Script</option>
 
             </select>
-            <select id="size" onclick="fontSize()">
+            <select id="size" onclick="commandValue('fontSize', 'size')">
                 <option value="1">1</option>
                 <option value="2">2</option>
-                <option value="3">3</option>
+                <option value="3" selected>3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
                 <option value="6">6</option>
@@ -47,18 +41,16 @@
 
             </select>
             <input type="color" oninput="color()" id="color">
-            <button onclick="riscar()">Riscar</button>
+            <button onclick="command('strikethrough', 'null')">Riscar</button>
             <button onclick="marcar()">marcar</button>
             <span id="palavras">1</span>
         </div>
-        <input type="button" value="Testar" onclick="testar()">
+        <input type="button" onclick="clearText()" value="Limpar Tudo">
     </div>
     
     
-    <div class="output">
-
-    </div>
-
-    <script src="script.js"></script>
+    
+    <script src="./src/scrips/commands.js"></script>
+    <script src="./src/scrips/script.js"></script>
 </body>
 </html>

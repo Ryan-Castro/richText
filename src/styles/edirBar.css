@@ -1,0 +1,31 @@
+#editBar{
+    display: flex;
+}
+
+#editBar button{
+    height: 8vh;
+    width: 20%;
+    border: none;
+}
+
+#editBar input{
+    height: 8vh;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-color: white;
+    color: black;
+}
+
+#palavras{
+    height: 8vh;
+    background-color: white;
+    padding: 3vh;
+}
+
+#titulos{
+    padding: 0px 25px;
+}
+
+#size{
+    padding: 0px 25px;
+}
